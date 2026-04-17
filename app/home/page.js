@@ -57,7 +57,7 @@ export default function HomePage() {
           pointerEvents: 'none',
         }} />
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', position: 'relative', zIndex: 2, marginTop: '260px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', position: 'relative', zIndex: 2, marginTop: '0px' }}>
           <h2 style={{ color: 'white', fontSize: '20px', fontWeight: 700, fontFamily: 'Lato, sans-serif' }}>
             Hola, {userName} 👋
           </h2>
@@ -98,9 +98,10 @@ export default function HomePage() {
           {['Favoritos', 'Recientes'].map((tab, i) => (
             <div key={tab} style={{
               display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px',
-              color: i === 0 ? '#C9A84C' : 'rgba(255,255,255,0.4)',
-              fontSize: '11px', fontWeight: 600, cursor: 'pointer',
+              color: i === 0 ? '#C9A84C' : 'rgba(255,255,255,0.7)',
+              fontSize: '13px', fontWeight: 700, cursor: 'pointer',
               fontFamily: 'Lato, sans-serif',
+              textShadow: '0 1px 4px rgba(0,0,0,0.8)',
             }}>
               <span>{i === 0 ? '☆' : '🕐'}</span>
               {tab}
