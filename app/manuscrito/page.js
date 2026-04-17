@@ -142,11 +142,10 @@ export default function ManuscritoPage() {
           width: '100%', height: '100%',
           background: 'linear-gradient(180deg, #0a0818 0%, #1a1035 60%, #2d1b4e 100%)',
           display: 'flex', alignItems: 'center', justifyContent: 'center',
-          fontSize: '80px',
+          overflow: 'hidden',
         }}>
           <img src="/images/manuscrito-raphael.jpg" alt="Manuscrito" style={{ width: '100%', height: '100%', objectFit: 'cover' }}
             onError={(e) => { e.target.style.display = 'none' }} />
-          📜
         </div>
 
         {/* Botão voltar */}
