@@ -503,7 +503,6 @@ export default function CodigoLourdesPage() {
           <img src="/images/codigo-lourdes.jpg" alt="Código de Lourdes"
               style={{ width: '100%', height: '100%', objectFit: 'cover' }}
               onError={(e) => { e.target.style.display = 'none' }} />
-            📖
           </div>
         </div>
 
