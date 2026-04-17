@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --gold: #C9A84C;
+  --gold-light: #E8C97A;
+  --cream: #F5F0E8;
+  --divine-dark: #0f0c24;
+  --divine-mid: #1a1035;
+  --divine-blue: #1e1b4b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--cream);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  max-width: 480px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+/* Scrollbar fina */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #C9A84C44; border-radius: 2px; }
+
+/* Animação fade */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.4s ease forwards; }
+
+/* Estilo de card de conteúdo */
+.content-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+}
+
+/* Player de áudio customizado */
+audio {
+  width: 100%;
+  height: 40px;
+  accent-color: var(--gold);
+}
+
+/* Botão gold */
+.btn-gold {
+  background: linear-gradient(135deg, #C9A84C, #E8C97A);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 28px;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  width: 100%;
+  transition: opacity 0.2s;
+}
+.btn-gold:hover { opacity: 0.9; }
+
+/* Nav bar inferior */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 480px;
+  background: white;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-around;
+  padding: 10px 0 20px;
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3px;
+  font-size: 10px;
+  color: #999;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-item.active { color: var(--gold); }
+.nav-item svg { width: 22px; height: 22px; }
+
+/* Badge de categoria */
+.badge {
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+}
+.badge-daily { background: #FFF3CD; color: #7A5800; }
+.badge-sleep { background: #1e1b4b22; color: #3730a3; }
+.badge-intention { background: #F0F9FF; color: #0369a1; }
+.badge-recommended { background: var(--gold); color: white; }
+
+/* Página com scroll e padding para nav */
+.page-content {
+  padding-bottom: 90px;
+  min-height: 100vh;
+}
