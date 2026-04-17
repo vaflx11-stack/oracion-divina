@@ -166,11 +166,17 @@ export default function HomePage() {
         {/* Destaque de Livro */}
         <Link href="/manuscrito" style={{ textDecoration: 'none' }}>
         <div style={{
-          background: 'linear-gradient(135deg, #1a1035cc, #2d1b4ecc), url(/images/codigo-lourdes.jpg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              borderRadius: '20px', padding: '20px', marginBottom: '20px',
-              cursor: 'pointer',
+          background: 'linear-gradient(135deg, #1a1035cc, #0f0c24cc), url(/images/manuscrito-raphael.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          borderRadius: '20px',
+          padding: '20px',
+          marginBottom: '20px',
+          position: 'relative',
+          overflow: 'hidden',
+          minHeight: '140px',
+          display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+          cursor: 'pointer',
         }}>
           <div style={{ position: 'absolute', top: 12, left: 12 }}>
             <span className="badge badge-recommended">RECOMENDADO</span>
@@ -222,7 +228,9 @@ export default function HomePage() {
         {libros.map((l) => (
           <Link key={l.id} href="/codigo-lourdes" style={{ textDecoration: 'none' }}>
             <div style={{
-              background: 'linear-gradient(135deg, #1a1035, #2d1b4e)',
+              background: 'linear-gradient(135deg, #1a1035cc, #2d1b4ecc), url(/images/codigo-lourdes.jpg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
               borderRadius: '20px', padding: '20px', marginBottom: '20px',
               cursor: 'pointer',
             }}>
