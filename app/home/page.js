@@ -31,7 +31,6 @@ export default function HomePage() {
     if (!user) { router.push('/login'); return }
     const name = user.split('@')[0]
     setUserName(name)
-    // Simula contador crescendo
     const interval = setInterval(() => {
       setContador(c => c + Math.floor(Math.random() * 3))
     }, 4000)
@@ -43,13 +42,11 @@ export default function HomePage() {
 
       {/* Hero com anjo */}
       <div style={{
-        background: 'radial-gradient(circle, rgba(201,168,76,0.25) 0%, transparent 70%)',
-          pointerEvents: 'none',
+        background: 'linear-gradient(180deg, #0f0c24 0%, #1e1654 60%, var(--cream) 100%)',
         padding: '24px 20px 40px',
         position: 'relative',
         overflow: 'hidden',
       }}>
-        {/* Luz dourada */}
         <div style={{
           position: 'absolute', top: 0, left: '50%', transform: 'translateX(-50%)',
           width: '200px', height: '200px',
@@ -57,7 +54,7 @@ export default function HomePage() {
           pointerEvents: 'none',
         }} />
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', position: 'relative', zIndex: 2, marginTop: '200px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', position: 'relative', zIndex: 1 }}>
           <h2 style={{ color: 'white', fontSize: '20px', fontWeight: 700, fontFamily: 'Lato, sans-serif' }}>
             Hola, {userName} 👋
           </h2>
@@ -66,11 +63,11 @@ export default function HomePage() {
 
         {/* Imagem do anjo */}
         <div style={{
-        width: '100%', height: '320px', margin: '0',
-          position: 'absolute', overflow: 'hidden',
-          top: '0', left: '0',
-          borderRadius: '0px',
-          border: 'none', zIndex: '0',
+          width: '220px', height: '260px', margin: '0 auto 16px',
+          position: 'relative', overflow: 'hidden',
+          borderRadius: '50% 50% 40% 40%',
+          border: '1px solid rgba(201,168,76,0.25)',
+          boxShadow: '0 0 40px rgba(201,168,76,0.15)',
         }}>
           <img
             src="/images/angel-hero.jpg"
@@ -79,29 +76,23 @@ export default function HomePage() {
               width: '100%', height: '100%',
               objectFit: 'cover',
               objectPosition: 'center top',
-              display: 'block', position: 'relative', zIndex: '0',
+              display: 'block',
             }}
             onError={(e) => {
               e.target.style.display = 'none'
-              e.target.parentElement.style.background = 'linear-gradient(180deg, rgba(201,168,76,0.15) 0%, rgba(30,22,84,0.3) 100%)'
-              e.target.parentElement.style.display = 'flex'
-              e.target.parentElement.style.alignItems = 'center'
-              e.target.parentElement.style.justifyContent = 'center'
-              e.target.parentElement.style.fontSize = '100px'
               e.target.parentElement.innerHTML = '🕊️'
             }}
           />
         </div>
 
-        {/* Tabs Favoritos / Recientes */}
+        {/* Tabs */}
         <div style={{ display: 'flex', gap: '24px', justifyContent: 'center', marginBottom: '16px' }}>
           {['Favoritos', 'Recientes'].map((tab, i) => (
             <div key={tab} style={{
               display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '4px',
-              color: i === 0 ? '#C9A84C' : 'rgba(255,255,255,0.7)',
-              fontSize: '13px', fontWeight: 700, cursor: 'pointer',
+              color: i === 0 ? '#C9A84C' : 'rgba(255,255,255,0.4)',
+              fontSize: '11px', fontWeight: 600, cursor: 'pointer',
               fontFamily: 'Lato, sans-serif',
-              textShadow: '0 1px 4px rgba(0,0,0,0.8)',
             }}>
               <span>{i === 0 ? '☆' : '🕐'}</span>
               {tab}
@@ -112,16 +103,12 @@ export default function HomePage() {
 
       <div style={{ padding: '0 16px' }}>
 
-        {/* Card "Habla con Jesús" */}
+        {/* Card Habla con Jesús */}
         <div style={{
           background: 'linear-gradient(135deg, #1a1035bb, #2d1b4ebb), url(/images/habla-jesus.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center top',
-          borderRadius: '20px',
-          padding: '20px',
-          marginBottom: '16px',
-          position: 'relative',
-          overflow: 'hidden',
+          backgroundSize: 'cover', backgroundPosition: 'center',
+          borderRadius: '20px', padding: '20px',
+          marginBottom: '16px', position: 'relative', overflow: 'hidden',
         }}>
           <span style={{
             background: '#22c55e', color: 'white', fontSize: '9px', fontWeight: 700,
@@ -142,11 +129,8 @@ export default function HomePage() {
 
         {/* Cita do dia */}
         <div style={{
-          background: '#111827',
-          borderRadius: '20px',
-          padding: '20px',
-          marginBottom: '16px',
-          textAlign: 'center',
+          background: '#111827', borderRadius: '20px',
+          padding: '20px', marginBottom: '16px', textAlign: 'center',
         }}>
           <div style={{ color: '#C9A84C', fontSize: '24px', marginBottom: '8px' }}>"</div>
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '11px', letterSpacing: '0.1em', marginBottom: '8px', fontFamily: 'Lato, sans-serif' }}>
@@ -167,32 +151,26 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Destaque de Livro */}
+        {/* Destaque Manuscrito */}
         <Link href="/manuscrito" style={{ textDecoration: 'none' }}>
-        <div style={{
-          background: 'linear-gradient(135deg, #1a1035cc, #0f0c24cc), url(/images/manuscrito-raphael.jpg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
-          borderRadius: '20px',
-          padding: '20px',
-          marginBottom: '20px',
-          position: 'relative',
-          overflow: 'hidden',
-          minHeight: '140px',
-          display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
-          cursor: 'pointer',
-        }}>
-          <div style={{ position: 'absolute', top: 12, left: 12 }}>
-            <span className="badge badge-recommended">RECOMENDADO</span>
+          <div style={{
+            background: 'linear-gradient(135deg, #1a1035, #0f0c24)',
+            borderRadius: '20px', padding: '20px', marginBottom: '20px',
+            position: 'relative', overflow: 'hidden',
+            minHeight: '140px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+            cursor: 'pointer',
+          }}>
+            <div style={{ position: 'absolute', top: 12, left: 12 }}>
+              <span className="badge badge-recommended">RECOMENDADO</span>
+            </div>
+            <div style={{ position: 'absolute', top: 0, right: 0, fontSize: '60px', opacity: 0.3 }}>📜</div>
+            <h3 style={{ color: 'white', fontSize: '18px', fontWeight: 700, fontFamily: 'Cinzel, serif', marginBottom: '4px' }}>
+              Descubre el Manuscrito del Arcángel Rafael
+            </h3>
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
+              Misterio y Curación Divina
+            </p>
           </div>
-          <div style={{ position: 'absolute', top: 0, right: 0, fontSize: '60px', opacity: 0.3 }}>📜</div>
-          <h3 style={{ color: 'white', fontSize: '18px', fontWeight: 700, fontFamily: 'Cinzel, serif', marginBottom: '4px' }}>
-            Descubre el Manuscrito del Arcángel Rafael
-          </h3>
-          <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
-            Misterio y Curación Divina
-          </p>
-        </div>
         </Link>
 
         {/* Orações */}
@@ -201,7 +179,7 @@ export default function HomePage() {
         </h3>
         <div style={{ display: 'flex', flexDirection: 'column', gap: '10px', marginBottom: '24px' }}>
           {oraciones.map((o) => (
-            <Link key={o.id} href={`/oraciones`} style={{ textDecoration: 'none' }}>
+            <Link key={o.id} href="/oraciones" style={{ textDecoration: 'none' }}>
               <div style={{
                 display: 'flex', alignItems: 'center', gap: '12px',
                 background: 'white', borderRadius: '14px', padding: '12px',
@@ -233,10 +211,8 @@ export default function HomePage() {
           <Link key={l.id} href="/codigo-lourdes" style={{ textDecoration: 'none' }}>
             <div style={{
               background: 'linear-gradient(135deg, #1a1035cc, #2d1b4ecc), url(/images/codigo-lourdes.jpg)',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center',
-              borderRadius: '20px', padding: '20px', marginBottom: '20px',
-              cursor: 'pointer',
+              backgroundSize: 'cover', backgroundPosition: 'center',
+              borderRadius: '20px', padding: '20px', marginBottom: '20px', cursor: 'pointer',
             }}>
               <span style={{ background: '#C9A84C', color: 'white', fontSize: '9px', fontWeight: 700, padding: '2px 8px', borderRadius: '4px', letterSpacing: '0.08em' }}>
                 {l.badge}
