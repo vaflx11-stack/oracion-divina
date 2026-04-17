@@ -143,7 +143,6 @@ Temas que puedes abordar: ansiedad, perdón, familia, fe, propósito, sanación,
               <img src="/images/jesus-avatar.jpg" alt="Jesús"
                 style={{ width: '100%', height: '100%', objectFit: 'cover' }}
                 onError={(e) => { e.target.style.display = 'none' }} />
-              ☁️
             </div>
 
             <h2 style={{
