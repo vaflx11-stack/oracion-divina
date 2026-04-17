@@ -112,7 +112,9 @@ export default function HomePage() {
 
         {/* Card "Habla con Jesús" */}
         <div style={{
-          background: 'linear-gradient(135deg, #1a1035, #2d1b4e)',
+          background: 'linear-gradient(135deg, #1a1035bb, #2d1b4ebb), url(/images/habla-jesus.jpg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center top',
           borderRadius: '20px',
           padding: '20px',
           marginBottom: '16px',
