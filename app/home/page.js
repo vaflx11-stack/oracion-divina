@@ -43,8 +43,8 @@ export default function HomePage() {
 
       {/* Hero com anjo */}
       <div style={{
-        background: 'linear-gradient(to bottom, transparent 40%, #1e1654 100%)',
-          pointerEvents: 'none', width: '100%', height: '100%',
+        background: 'radial-gradient(circle, rgba(201,168,76,0.25) 0%, transparent 70%)',
+          pointerEvents: 'none',
         padding: '24px 20px 40px',
         position: 'relative',
         overflow: 'hidden',
@@ -57,7 +57,7 @@ export default function HomePage() {
           pointerEvents: 'none',
         }} />
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', position: 'relative', zIndex: 1 }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', position: 'relative', zIndex: 2, marginTop: '260px' }}>
           <h2 style={{ color: 'white', fontSize: '20px', fontWeight: 700, fontFamily: 'Lato, sans-serif' }}>
             Hola, {userName} 👋
           </h2>
@@ -66,10 +66,11 @@ export default function HomePage() {
 
         {/* Imagem do anjo */}
         <div style={{
-         width: '100%', height: '320px', margin: '0 auto 0',
-          position: 'relative', overflow: 'hidden',
+        width: '100%', height: '320px', margin: '0',
+          position: 'absolute', overflow: 'hidden',
+          top: '0', left: '0',
           borderRadius: '0px',
-          border: 'none',
+          border: 'none', zIndex: '0',
         }}>
           <img
             src="/images/angel-hero.jpg"
@@ -77,8 +78,8 @@ export default function HomePage() {
             style={{
               width: '100%', height: '100%',
               objectFit: 'cover',
-              objectPosition: 'center center', objectFit: 'cover',
-              display: 'block',
+              objectPosition: 'center top',
+              display: 'block', position: 'relative', zIndex: '0',
             }}
             onError={(e) => {
               e.target.style.display = 'none'
