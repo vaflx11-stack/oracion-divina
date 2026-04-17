@@ -43,7 +43,8 @@ export default function HomePage() {
 
       {/* Hero com anjo */}
       <div style={{
-        background: 'linear-gradient(180deg, #0f0c24 0%, #1e1654 60%, var(--cream) 100%)',
+        background: 'linear-gradient(to bottom, transparent 40%, #1e1654 100%)',
+          pointerEvents: 'none', width: '100%', height: '100%',
         padding: '24px 20px 40px',
         position: 'relative',
         overflow: 'hidden',
@@ -65,7 +66,7 @@ export default function HomePage() {
 
         {/* Imagem do anjo */}
         <div style={{
-          width: '100%', height: '320px', margin: '0 auto 16px',
+         width: '100%', height: '320px', margin: '0 auto 0',
           position: 'relative', overflow: 'hidden',
           borderRadius: '0px',
           border: 'none',
@@ -76,7 +77,7 @@ export default function HomePage() {
             style={{
               width: '100%', height: '100%',
               objectFit: 'cover',
-              objectPosition: 'center top',
+              objectPosition: 'center center', objectFit: 'cover',
               display: 'block',
             }}
             onError={(e) => {
