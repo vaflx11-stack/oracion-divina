@@ -65,11 +65,10 @@ export default function HomePage() {
 
         {/* Imagem do anjo */}
         <div style={{
-          width: '220px', height: '260px', margin: '0 auto 16px',
+          width: '100%', height: '320px', margin: '0 auto 16px',
           position: 'relative', overflow: 'hidden',
-          borderRadius: '50% 50% 40% 40%',
-          border: '1px solid rgba(201,168,76,0.25)',
-          boxShadow: '0 0 40px rgba(201,168,76,0.15)',
+          borderRadius: '0px',
+          border: 'none',
         }}>
           <img
             src="/images/angel-hero.jpg"
