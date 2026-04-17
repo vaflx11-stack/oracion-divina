@@ -57,7 +57,7 @@ export default function HomePage() {
           pointerEvents: 'none',
         }} />
 
-        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', position: 'relative', zIndex: 2, marginTop: '0px' }}>
+        <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '16px', position: 'relative', zIndex: 2, marginTop: '200px' }}>
           <h2 style={{ color: 'white', fontSize: '20px', fontWeight: 700, fontFamily: 'Lato, sans-serif' }}>
             Hola, {userName} 👋
           </h2>
