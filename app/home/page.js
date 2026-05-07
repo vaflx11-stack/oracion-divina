@@ -175,9 +175,9 @@ export default function HomePage() {
 
         {/* 3 Cards Arcanjos */}
         {[
-          { href: '/arcanjo-miguel', img: '/images/arcanjo-miguel.png', arcanjo: 'ARCÁNGEL MIGUEL', titulo: 'Oración de Protección' },
           { href: '/arcanjo-rafael', img: '/images/arcanjo-rafael.png', arcanjo: 'ARCÁNGEL RAFAEL', titulo: 'Oración de Curación' },
           { href: '/arcanjo-gabriel', img: '/images/arcanjo-gabriel.png', arcanjo: 'ARCÁNGEL GABRIEL', titulo: 'Oración de Prosperidad' },
+          { href: '/arcanjo-miguel', img: '/images/arcanjo-miguel.png', arcanjo: 'ARCÁNGEL MIGUEL', titulo: 'Oración de Protección' },
         ].map((card, i) => (
           <Link key={i} href={card.href} style={{ textDecoration: 'none' }}>
             <div style={{
