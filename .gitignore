@@ -1,2 +1,5 @@
 node_modules/ 
 .next/ 
+!public/audios/arcanjo-miguel.mp3 
+!public/audios/arcanjo-rafael.mp3 
+!public/audios/arcanjo-gabriel.mp3 
