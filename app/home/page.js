@@ -242,7 +242,8 @@ export default function HomePage() {
         {/* Agua Sagrada */}
         <Link href="/agua-sagrada" style={{ textDecoration: 'none' }}>
           <div style={{
-            background: 'linear-gradient(135deg, #0a2a4a, #0d1f3c)',
+            background: 'linear-gradient(135deg, #0a2a4acc, #0d1f3ccc), url(/images/agua-sagrada.jpg)',
+            backgroundSize: 'cover', backgroundPosition: 'center',
             borderRadius: '20px', padding: '20px', marginBottom: '16px',
             cursor: 'pointer', position: 'relative', overflow: 'hidden',
             minHeight: '120px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
@@ -251,7 +252,7 @@ export default function HomePage() {
             <div style={{ position: 'absolute', top: 12, left: 12 }}>
               <span style={{ background: 'rgba(100,180,255,0.2)', color: '#64B4FF', fontSize: '9px', fontWeight: 700, padding: '3px 10px', borderRadius: '20px', letterSpacing: '0.08em' }}>RITUAL SAGRADO</span>
             </div>
-            <h3 style={{ color: 'white', fontSize: '17px', fontWeight: 700, fontFamily: 'Cinzel, serif', marginBottom: '4px' }}>
+            <h3 style={{ color: 'white', fontSize: '16px', fontWeight: 700, fontFamily: 'Cinzel, serif', marginBottom: '4px', lineHeight: 1.2 }}>
               El Agua Sagrada de los 3 Arcángeles
             </h3>
             <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
