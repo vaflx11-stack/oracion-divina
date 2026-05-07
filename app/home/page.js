@@ -239,6 +239,27 @@ export default function HomePage() {
           ))}
         </div>
 
+        {/* Agua Sagrada */}
+        <Link href="/agua-sagrada" style={{ textDecoration: 'none' }}>
+          <div style={{
+            background: 'linear-gradient(135deg, #0a2a4a, #0d1f3c)',
+            borderRadius: '20px', padding: '20px', marginBottom: '16px',
+            cursor: 'pointer', position: 'relative', overflow: 'hidden',
+            minHeight: '120px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+          }}>
+            <div style={{ position: 'absolute', top: 0, right: 0, fontSize: '80px', opacity: 0.15 }}>💧</div>
+            <div style={{ position: 'absolute', top: 12, left: 12 }}>
+              <span style={{ background: 'rgba(100,180,255,0.2)', color: '#64B4FF', fontSize: '9px', fontWeight: 700, padding: '3px 10px', borderRadius: '20px', letterSpacing: '0.08em' }}>RITUAL SAGRADO</span>
+            </div>
+            <h3 style={{ color: 'white', fontSize: '17px', fontWeight: 700, fontFamily: 'Cinzel, serif', marginBottom: '4px' }}>
+              El Agua Sagrada de los 3 Arcángeles
+            </h3>
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
+              El antiguo ritual para limpiar el hogar y alejar el mal
+            </p>
+          </div>
+        </Link>
+
         {/* Livros */}
         <h3 style={{ fontSize: '17px', fontWeight: 700, marginBottom: '12px', color: '#111', fontFamily: 'Lato, sans-serif' }}>
           Libros

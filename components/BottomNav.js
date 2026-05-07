@@ -27,6 +27,15 @@ export default function BottomNav() {
       ),
     },
     {
+      href: '/agua-sagrada',
+      label: 'Ritual',
+      icon: (active) => (
+        <svg viewBox="0 0 24 24" fill={active ? '#C9A84C' : 'none'} stroke={active ? '#C9A84C' : '#999'} strokeWidth="1.8">
+          <path d="M12 2C12 2 5 10 5 14a7 7 0 0014 0c0-4-7-12-7-12z"/>
+        </svg>
+      ),
+    },
+    {
       href: '/musica',
       label: 'Música',
       icon: (active) => (
