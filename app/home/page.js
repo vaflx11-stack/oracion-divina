@@ -154,7 +154,8 @@ export default function HomePage() {
         {/* Destaque Manuscrito */}
         <Link href="/manuscrito" style={{ textDecoration: 'none' }}>
           <div style={{
-            background: 'linear-gradient(135deg, #1a1035, #0f0c24)',
+            background: 'linear-gradient(135deg, #1a1035cc, #0f0c24cc), url(/images/manuscrito-raphael.jpg)',
+          backgroundSize: 'cover', backgroundPosition: 'center',
             borderRadius: '20px', padding: '20px', marginBottom: '20px',
             position: 'relative', overflow: 'hidden',
             minHeight: '140px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
@@ -163,7 +164,7 @@ export default function HomePage() {
             <div style={{ position: 'absolute', top: 12, left: 12 }}>
               <span className="badge badge-recommended">RECOMENDADO</span>
             </div>
-            <div style={{ position: 'absolute', top: 0, right: 0, fontSize: '60px', opacity: 0.3 }}>📜</div>
+          
             <h3 style={{ color: 'white', fontSize: '18px', fontWeight: 700, fontFamily: 'Cinzel, serif', marginBottom: '4px' }}>
               Descubre el Manuscrito del Arcángel Rafael
             </h3>
