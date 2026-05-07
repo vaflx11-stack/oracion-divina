@@ -173,6 +173,11 @@ export default function HomePage() {
           </div>
         </Link>
 
+        {/* Título Arcanjos */}
+        <h3 style={{ fontSize: '17px', fontWeight: 700, marginBottom: '12px', color: '#111', fontFamily: 'Lato, sans-serif' }}>
+          Oraciones de los Arcángeles
+        </h3>
+
         {/* 3 Cards Arcanjos */}
         {[
           { href: '/arcanjo-rafael', img: '/images/arcanjo-rafael.png', arcanjo: 'ARCÁNGEL RAFAEL', titulo: 'Oración de Curación' },
@@ -238,6 +243,11 @@ export default function HomePage() {
             </Link>
           ))}
         </div>
+
+       {/* Título Agua Sagrada */}
+        <h3 style={{ fontSize: '17px', fontWeight: 700, marginBottom: '12px', color: '#111', fontFamily: 'Lato, sans-serif' }}>
+          Agua Sagrada
+        </h3>
 
         {/* Agua Sagrada */}
         <Link href="/agua-sagrada" style={{ textDecoration: 'none' }}>
