@@ -173,6 +173,42 @@ export default function HomePage() {
           </div>
         </Link>
 
+        {/* 3 Cards Arcanjos */}
+        {[
+          { href: '/arcanjo-miguel', img: '/images/arcanjo-miguel.png', arcanjo: 'ARCÁNGEL MIGUEL', titulo: 'Oración de Protección' },
+          { href: '/arcanjo-rafael', img: '/images/arcanjo-rafael.png', arcanjo: 'ARCÁNGEL RAFAEL', titulo: 'Oración de Curación' },
+          { href: '/arcanjo-gabriel', img: '/images/arcanjo-gabriel.png', arcanjo: 'ARCÁNGEL GABRIEL', titulo: 'Oración de Prosperidad' },
+        ].map((card, i) => (
+          <Link key={i} href={card.href} style={{ textDecoration: 'none' }}>
+            <div style={{
+              borderRadius: '20px', marginBottom: '16px',
+              overflow: 'hidden', cursor: 'pointer',
+              position: 'relative', height: '140px',
+              boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
+            }}>
+              <img src={card.img} alt={card.titulo}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', objectPosition: 'center top' }}
+                onError={(e) => { e.target.style.display = 'none' }} />
+              <div style={{
+                position: 'absolute', top: 0, left: 0, right: 0, bottom: 0,
+                background: 'linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 100%)',
+                display: 'flex', flexDirection: 'column', justifyContent: 'center',
+                padding: '20px',
+              }}>
+                <div style={{ color: '#C9A84C', fontSize: '9px', fontWeight: 700, letterSpacing: '0.15em', marginBottom: '6px', fontFamily: 'Lato, sans-serif' }}>
+                  {card.arcanjo}
+                </div>
+                <div style={{ color: 'white', fontSize: '18px', fontWeight: 700, fontFamily: 'Cinzel, serif', lineHeight: 1.2 }}>
+                  {card.titulo}
+                </div>
+                <div style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', marginTop: '6px', fontFamily: 'Lato, sans-serif', display: 'flex', alignItems: 'center', gap: '6px' }}>
+                  <span style={{ fontSize: '16px' }}>▶</span> Escuchar oración
+                </div>
+              </div>
+            </div>
+          </Link>
+        ))}
+
         {/* Orações */}
         <h3 style={{ fontSize: '17px', fontWeight: 700, marginBottom: '12px', color: '#111', fontFamily: 'Lato, sans-serif' }}>
           Oraciones
