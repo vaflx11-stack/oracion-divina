@@ -37,7 +37,7 @@ export default function BottomNav() {
     },
     {
       href: '/musica',
-      label: 'Música',
+      label: 'Frecuencia',
       icon: (active) => (
         <svg viewBox="0 0 24 24" fill={active ? '#C9A84C' : 'none'} stroke={active ? '#C9A84C' : '#999'} strokeWidth="1.8">
           <path d="M9 18V5l12-2v13"/>

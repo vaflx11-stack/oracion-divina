@@ -46,7 +46,7 @@ export default function MusicaPage() {
     <div className="page-content" style={{ background: 'var(--cream)' }}>
       <div style={{ padding: '20px 16px 0' }}>
         <h1 style={{ fontSize: '28px', fontWeight: 800, color: '#111', fontFamily: 'Lato, sans-serif' }}>
-          Música
+         Frecuencias Celestiales
         </h1>
         <p style={{ color: '#888', fontSize: '14px', marginBottom: '8px', fontFamily: 'Lato, sans-serif' }}>
           Frecuencias de sanación y melodías divinas
