@@ -150,6 +150,7 @@ export default function ComunidadOracionPage() {
                       <div style={{ marginTop: '18px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
                         <Bloque etiqueta="GUÍA DEL DÍA" texto={dia.guia} />
                         <Bloque etiqueta="DECRETO SAGRADO" texto={dia.decreto} destacado />
+                        <Bloque etiqueta="ORACIÓN DEL DÍA" texto={dia.oracion} oracion />
                         <Bloque etiqueta="RITUAL DE CONEXIÓN" texto={dia.ritual} />
 
                         <button
@@ -179,19 +180,26 @@ export default function ComunidadOracionPage() {
   )
 }
 
-function Bloque({ etiqueta, texto, destacado }) {
+function Bloque({ etiqueta, texto, destacado, oracion }) {
+  const estiloCaja = destacado
+    ? { background: 'rgba(212,175,106,0.08)', border: '1px solid rgba(212,175,106,0.25)', borderRadius: '12px', padding: '14px 16px' }
+    : oracion
+    ? { background: 'rgba(0,0,0,0.25)', borderRadius: '14px', padding: '18px' }
+    : {}
+
   return (
-    <div style={destacado ? {
-      background: 'rgba(212,175,106,0.08)', border: '1px solid rgba(212,175,106,0.25)',
-      borderRadius: '12px', padding: '14px 16px',
-    } : {}}>
-      <div style={{ color: '#D4AF6A', fontSize: '10px', fontWeight: 700, letterSpacing: '0.08em', marginBottom: '6px', fontFamily: 'Lato, sans-serif' }}>
+    <div style={estiloCaja}>
+      <div style={{ color: '#D4AF6A', fontSize: '10px', fontWeight: 700, letterSpacing: '0.08em', marginBottom: oracion ? '10px' : '6px', fontFamily: 'Lato, sans-serif' }}>
         {etiqueta}
       </div>
       <p style={{
-        color: destacado ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.7)',
-        fontSize: '13px', lineHeight: 1.7, fontFamily: destacado ? 'Georgia, serif' : 'Lato, sans-serif',
-        fontStyle: destacado ? 'italic' : 'normal', margin: 0,
+        color: destacado || oracion ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.7)',
+        fontSize: oracion ? '14px' : '13px',
+        lineHeight: oracion ? 1.8 : 1.7,
+        fontFamily: destacado || oracion ? 'Georgia, serif' : 'Lato, sans-serif',
+        fontStyle: destacado || oracion ? 'italic' : 'normal',
+        whiteSpace: oracion ? 'pre-line' : 'normal',
+        margin: 0,
       }}>
         {texto}
       </p>
