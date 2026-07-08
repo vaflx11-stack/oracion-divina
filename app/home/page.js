@@ -280,7 +280,8 @@ export default function HomePage() {
         {/* Mapeo Espiritual */}
         <Link href="/mapeo-espiritual" style={{ textDecoration: 'none' }}>
           <div style={{
-            background: 'linear-gradient(135deg, #2a0a3a, #150b2e)',
+            background: 'linear-gradient(135deg, #2a0a3acc, #150b2ecc), url(/images/mapeo-espiritual.jpg)',
+            backgroundSize: 'cover', backgroundPosition: 'center',
             borderRadius: '20px', padding: '20px', marginBottom: '16px',
             cursor: 'pointer', position: 'relative', overflow: 'hidden',
             minHeight: '120px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
