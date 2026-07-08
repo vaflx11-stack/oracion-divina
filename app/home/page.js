@@ -272,6 +272,32 @@ export default function HomePage() {
           </div>
         </Link>
 
+        {/* Título Mapeo Espiritual */}
+        <h3 style={{ fontSize: '17px', fontWeight: 700, marginBottom: '12px', color: '#111', fontFamily: 'Lato, sans-serif' }}>
+          Mapeo Espiritual
+        </h3>
+
+        {/* Mapeo Espiritual */}
+        <Link href="/mapeo-espiritual" style={{ textDecoration: 'none' }}>
+          <div style={{
+            background: 'linear-gradient(135deg, #2a0a3a, #150b2e)',
+            borderRadius: '20px', padding: '20px', marginBottom: '16px',
+            cursor: 'pointer', position: 'relative', overflow: 'hidden',
+            minHeight: '120px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
+          }}>
+            <div style={{ position: 'absolute', top: 0, right: 0, fontSize: '80px', opacity: 0.15 }}>🗺️</div>
+            <div style={{ position: 'absolute', top: 12, left: 12 }}>
+              <span style={{ background: 'rgba(212,175,106,0.2)', color: '#D4AF6A', fontSize: '9px', fontWeight: 700, padding: '3px 10px', borderRadius: '20px', letterSpacing: '0.08em' }}>TU CONTENIDO EXCLUSIVO</span>
+            </div>
+            <h3 style={{ color: 'white', fontSize: '16px', fontWeight: 700, fontFamily: 'Cinzel, serif', marginBottom: '4px', lineHeight: 1.2 }}>
+              Mapeo Espiritual Personal
+            </h3>
+            <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: '12px', fontFamily: 'Lato, sans-serif' }}>
+              Descubre tus bloqueos y cuál destruir primero
+            </p>
+          </div>
+        </Link>
+
         {/* Livros */}
         <h3 style={{ fontSize: '17px', fontWeight: 700, marginBottom: '12px', color: '#111', fontFamily: 'Lato, sans-serif' }}>
           Libros
