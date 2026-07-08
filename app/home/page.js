@@ -307,7 +307,8 @@ export default function HomePage() {
         {/* Frecuencia Celestial */}
         <Link href="/frecuencia-celestial" style={{ textDecoration: 'none' }}>
           <div style={{
-            background: 'linear-gradient(135deg, #1a2a4a, #0d1830)',
+           background: 'linear-gradient(135deg, #1a2a4acc, #0d1830cc), url(/images/frecuencia-celestial.jpg)',
+            backgroundSize: 'cover', backgroundPosition: 'center',
             borderRadius: '20px', padding: '20px', marginBottom: '16px',
             cursor: 'pointer', position: 'relative', overflow: 'hidden',
             minHeight: '120px', display: 'flex', flexDirection: 'column', justifyContent: 'flex-end',
